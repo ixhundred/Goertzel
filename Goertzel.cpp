@@ -79,7 +79,7 @@ void Goertzel::ProcessSample(int sample)
 /* Sample some test data. */
 void Goertzel::sample(int sensorPin)
 {
-  for (int index = 0; index < _N; index++)
+  for (int index = 0; index < NN; index++)
   {
     testData[index] = analogRead(sensorPin);
   }
@@ -91,7 +91,7 @@ float Goertzel::detect()
   float	magnitude;
 
   /* Process the samples. */
-  for (int index = 0; index < _N; index++)
+  for (int index = 0; index < NN; index++)
   {
     ProcessSample(testData[index]);
   }
